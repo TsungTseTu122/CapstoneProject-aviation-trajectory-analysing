@@ -1,6 +1,24 @@
 # aviation-trajectory-prediction
 ## Overview
-This repository extends the pre-trained TrajAirNet model for general aviation trajectory prediction. The focus is on handling Out-of-Distribution (OOD) and Non-IID data using synthetic data augmentation and fine-tuning techniques. The dataset includes real-world flight trajectories, synthetic data, and OOD test data.
+This repository extends the pre-trained TrajAirNet model for general aviation trajectory prediction. The focus is on handling Out-of-Distribution (OOD) and Non-IID data using synthetic data augmentation and fine-tuning techniques. The dataset includes real-world flight trajectories, synthetic data, and OOD test data. The purpose of this project is to improve trajectory prediction for general aviation (GA) by addressing the limitations of existing models in handling unpredictable flight paths.
+
+## Research Focus & Objectives
+This project investigates general aviation trajectory prediction, focusing on:
+
+- Out-of-Distribution (OOD) handling: Assessing how well the model generalizes to unseen flight trajectories.
+- Non-IID Data Challenges: Addressing the high variability in real-world aviation data and ensuring balanced model performance across different flight patterns.
+- Synthetic Data Augmentation: Using synthetic trajectories to fill gaps in training data and
+evaluate their impact on generalization.
+
+## Key Contributions
+This project enhances trajectory prediction models, particularly for handling Out-of-Distribution (OOD) and non-IID data. The key contributions include:
+
+Fine-tuning a pre-trained model: The original TrajAirNet model was refined to improve its ability to capture the complexities of general aviation (GA) flight paths.
+Synthetic data integration: Manually augmented synthetic trajectories were incorporated into training to expose the model to diverse flight patterns and improve generalization.
+Uncertainty estimation: The Maximum Softmax Probability (MSP) technique was used to quantify model confidence, helping differentiate between in-distribution and OOD predictions.
+Visualization tools: 3D trajectory clustering, real vs. predicted trajectory comparisons, and loss curves were introduced to enhance interpretability.
+Hyperparameter tuning: Key parameters (e.g., batch size, kernel size, attention heads, and training epochs) were adjusted to balance performance and computational efficiency.
+
 
 ## Repository Structure
 ```
@@ -34,6 +52,9 @@ aviation-trajectory-prediction/
 │   │   gat_layers.py
 ```
 
+### Setup Disclaimer
+The provided setup below is only for showcase purposes and does not fully replicate the final results. The provided pipeline simplifies the setup process for demonstration. If you wish to exactly reproduce the final results, additional data handling and model tuning are required.  
+
 ## Required Files from the Original Repository
 To train and test the model, download the following files from the original **TrajAirNet repository** and place them in the `src/` folder:
 
@@ -48,7 +69,7 @@ Download these files from the official repository: [TrajAirNet GitHub](https://g
 After downloading, place them inside the `src/` directory.
 
 ## Setup Instructions
-
+Due to the dataset size, this is just a sample trial to replicate and show the result.
 1. Clone the repository
 ```
 git clone https://github.com/TsungTseTu122/aviation-trajectory-prediction.git
@@ -60,14 +81,11 @@ cd aviation-trajectory-prediction
 pip install -r requirements.txt
 ```
 
-3. Preprocess Synthetic Data (Optional)
-You can either use the preprocessed dataset or regenerate it using:
-`python src/synthetic data pre-processing.py`
-If you wish to preprocess the synthetic data yourself, use the provided Excel file `(df_traj_tr_data_export_20241012_1047541.xlsm)`.
+3. Use the Provided Preprocessed Data
+For convenience, we provide a fully preprocessed dataset to streamline replication.
 
 4. Modify Paths in `train3.py` and `test3.py`
-
-By default, `train3.py` assumes that datasets and the pre-trained model are stored in a specific directory:
+By default, `train3.py` assumes that datasets and the pre-trained model are stored in a specific directory used when working on local computer:
 ```
 sys.path.append(os.path.join(os.getcwd(), 'C:/Users/Michael/Desktop/Y2 S2/DATA7903-Data Science Capstone Project 2B/dataset and pre-trained model/pre-trained model'))
 ```
@@ -91,6 +109,24 @@ Ensure paths in `test3.py` are also updated similarly. Then, run:
 ```
 python src/test3.py
 ```
+
+### Explanation of Additional Scripts
+While not required for this sample setup, the following scripts were used in earlier processing stages:
+
+synthetic data pre-processing.py
+
+This script was used to clean and preprocess the synthetic data, mainly to ensure it matched the format of real-world trajectory data.
+The Z-axis (altitude) was manually added to the synthetic dataset by averaging the altitude of the full real-world dataset (due to the quality provided).
+
+check matches(OOD and indis).py
+
+This script was used to set the OOD dataset. We use aircrafts with different IDs to use them as OOD data to see how the model would respond.
+
+## Results & Insights
+- Baseline Model Performance: Initial results showed a drop in accuracy when tested on OOD data.
+- Effect of Synthetic Data: Integrating synthetic data improved model robustness but also introduced some biases.
+- Impact of Non-IID Data: Certain flight patterns were overrepresented, impacting generalization.
+- Tradeoffs in Model Fine-Tuning: We observed diminishing returns when adding excessive synthetic data.
 
 ## Hyperparameter Adjustment
 
