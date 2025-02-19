@@ -2,7 +2,7 @@
 ## Overview
 This repository extends the pre-trained TrajAirNet model for general aviation trajectory prediction. The focus is on handling Out-of-Distribution (OOD) and Non-IID data using synthetic data augmentation and fine-tuning techniques. The dataset includes real-world flight trajectories, synthetic data, and OOD test data. The purpose of this project is to improve trajectory prediction for general aviation (GA) by addressing the limitations of existing models in handling unpredictable flight paths.
 
-![Workflow Overview](workflow.png)
+![Workflow Overview](images/workflow.png)
 
 ## Research Focus & Objectives
 This project investigates general aviation trajectory prediction, focusing on:
@@ -20,7 +20,8 @@ This project enhances trajectory prediction models, particularly for handling Ou
 - Uncertainty estimation: The Maximum Softmax Probability (MSP) technique was used to quantify model confidence, helping differentiate between in-distribution and OOD predictions.
 - Visualization tools: 3D trajectory clustering, real vs. predicted trajectory comparisons, and loss curves were introduced to enhance interpretability.
 - Hyperparameter tuning: Key parameters (e.g., batch size, kernel size, attention heads, and training epochs) were adjusted to balance performance and computational efficiency.
-![Data Processing](Data processing.png)
+
+![Data Processing](images/Data processing.png)
 
 ## Repository Structure
 ```
@@ -129,7 +130,7 @@ This script was used to set the OOD dataset. We use aircrafts with different IDs
 - Effect of Synthetic Data: Integrating synthetic data improved model robustness but also introduced some biases.
 - Impact of Non-IID Data: Certain flight patterns were overrepresented, impacting generalization.
 - Tradeoffs in Model Fine-Tuning: We observed diminishing returns when adding excessive synthetic data.
-![3D Trajectory Comparisons](final_trajectory_collage.png)
+![3D Trajectory Comparisons](images/final_trajectory_collage.png)
 ![OOD Uncertainty](in distribution vs OOD uncertainty.png)
 
 
@@ -137,7 +138,7 @@ This script was used to set the OOD dataset. We use aircrafts with different IDs
 Below are the training and test losses for epochs 3 to 5. The **ADE (Average Displacement Error)** and **FDE (Final Displacement Error)** are used to measure the trajectory prediction accuracy.  
 A decreasing trend in **ADE loss** indicates improved prediction accuracy, while **FDE loss variation** suggests fluctuations in trajectory end-point prediction.
 
-![Training & Test Loss](epoch_3to5_loss.png)
+![Training & Test Loss](images/epoch_3to5_loss.png)
 
 ## Hyperparameter Adjustment
 
