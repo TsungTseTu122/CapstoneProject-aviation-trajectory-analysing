@@ -17,7 +17,7 @@ This project enhances trajectory prediction models, particularly for handling Ou
 - Synthetic data integration: Manually augmented synthetic trajectories were incorporated into training to expose the model to diverse flight patterns and improve generalization.
 - Uncertainty estimation: The Maximum Softmax Probability (MSP) technique was used to quantify model confidence, helping differentiate between in-distribution and OOD predictions.
 - Visualization tools: 3D trajectory clustering, real vs. predicted trajectory comparisons, and loss curves were introduced to enhance interpretability.
-Hyperparameter tuning: Key parameters (e.g., batch size, kernel size, attention heads, and training epochs) were adjusted to balance performance and computational efficiency.
+- Hyperparameter tuning: Key parameters (e.g., batch size, kernel size, attention heads, and training epochs) were adjusted to balance performance and computational efficiency.
 
 
 ## Repository Structure
@@ -113,12 +113,12 @@ python src/test3.py
 ### Explanation of Additional Scripts
 While not required for this sample setup, the following scripts were used in earlier processing stages:
 
-synthetic data pre-processing.py
+`synthetic data pre-processing.py`
 
 This script was used to clean and preprocess the synthetic data, mainly to ensure it matched the format of real-world trajectory data.
 The Z-axis (altitude) was manually added to the synthetic dataset by averaging the altitude of the full real-world dataset (due to the quality provided).
 
-check matches(OOD and indis).py
+`check matches(OOD and indis).py`
 
 This script was used to set the OOD dataset. We use aircrafts with different IDs to use them as OOD data to see how the model would respond.
 
