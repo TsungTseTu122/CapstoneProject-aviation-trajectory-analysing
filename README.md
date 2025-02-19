@@ -130,7 +130,8 @@ This script was used to set the OOD dataset. We use aircrafts with different IDs
 - Effect of Synthetic Data: Integrating synthetic data improved model robustness but also introduced some biases.
 - Impact of Non-IID Data: Certain flight patterns were overrepresented, impacting generalization.
 - Tradeoffs in Model Fine-Tuning: We observed diminishing returns when adding excessive synthetic data.
-![3D Trajectory Comparisons](images/final_trajectory_collage.png)
+<img src="images/final_trajectory_collage.png" width="400">
+
 ![OOD Uncertainty](images/in distribution vs OOD uncertainty.png)
 
 
