@@ -61,13 +61,13 @@ pip install -r requirements.txt
 ```
 3. Preprocess Synthetic Data
 You can either use the preprocessed dataset or regenerate it using:
-4. Modify Paths in train3.py and test3.py
+4. Modify Paths in `train3.py` and `test3.py`
 
-By default, train3.py assumes that datasets and the pre-trained model are stored in a specific directory:
+By default, `train3.py` assumes that datasets and the pre-trained model are stored in a specific directory:
 ```
 sys.path.append(os.path.join(os.getcwd(), 'C:/Users/Michael/Desktop/Y2 S2/DATA7903-Data Science Capstone Project 2B/dataset and pre-trained model/pre-trained model'))
 ```
-Change this path to match your directory structure where the pre-trained model files (trajairnet.py, utils.py) are stored.
+Change this path to match your directory structure where the pre-trained model files (trajairnet.py, utils.py...) are stored.
 
 Similarly, update the dataset paths:
 ```
@@ -83,8 +83,20 @@ python src/train3.py --dataset_folder ./sample_data
 ```
 6. Run Testing
 
-Ensure paths in test3.py are also updated similarly. Then, run:
+Ensure paths in `test3.py` are also updated similarly. Then, run:
 ```
 python src/test3.py
 ```
 
+## Hyperparameter Adjustment
+
+Users can freely modify the hyperparameters based on their own conditions and research objectives.
+
+## Citation & Acknowledgment
+- Original TrajAirNet Model: [GitHub Source](https://github.com/castacks/trajairnet)
+
+- Preprocessing code for synthetic data was modified to address inconsistencies in the provided dataset.
+
+## License
+
+This project is licensed under the BSD 3-Clause License. See `LICENSE` for details.
