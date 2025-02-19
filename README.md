@@ -13,10 +13,10 @@ evaluate their impact on generalization.
 ## Key Contributions
 This project enhances trajectory prediction models, particularly for handling Out-of-Distribution (OOD) and non-IID data. The key contributions include:
 
-Fine-tuning a pre-trained model: The original TrajAirNet model was refined to improve its ability to capture the complexities of general aviation (GA) flight paths.
-Synthetic data integration: Manually augmented synthetic trajectories were incorporated into training to expose the model to diverse flight patterns and improve generalization.
-Uncertainty estimation: The Maximum Softmax Probability (MSP) technique was used to quantify model confidence, helping differentiate between in-distribution and OOD predictions.
-Visualization tools: 3D trajectory clustering, real vs. predicted trajectory comparisons, and loss curves were introduced to enhance interpretability.
+- Fine-tuning a pre-trained model: The original TrajAirNet model was refined to improve its ability to capture the complexities of general aviation (GA) flight paths.
+- Synthetic data integration: Manually augmented synthetic trajectories were incorporated into training to expose the model to diverse flight patterns and improve generalization.
+- Uncertainty estimation: The Maximum Softmax Probability (MSP) technique was used to quantify model confidence, helping differentiate between in-distribution and OOD predictions.
+- Visualization tools: 3D trajectory clustering, real vs. predicted trajectory comparisons, and loss curves were introduced to enhance interpretability.
 Hyperparameter tuning: Key parameters (e.g., batch size, kernel size, attention heads, and training epochs) were adjusted to balance performance and computational efficiency.
 
 
