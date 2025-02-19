@@ -59,8 +59,12 @@ cd aviation-trajectory-prediction
 ```
 pip install -r requirements.txt
 ```
-3. Preprocess Synthetic Data
+
+3. Preprocess Synthetic Data (Optional)
 You can either use the preprocessed dataset or regenerate it using:
+`python src/synthetic data pre-processing.py`
+If you wish to preprocess the synthetic data yourself, use the provided Excel file `(df_traj_tr_data_export_20241012_1047541.xlsm)`.
+
 4. Modify Paths in `train3.py` and `test3.py`
 
 By default, `train3.py` assumes that datasets and the pre-trained model are stored in a specific directory:
