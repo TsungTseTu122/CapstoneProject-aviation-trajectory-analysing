@@ -2,7 +2,7 @@
 ## Overview
 This repository extends the pre-trained TrajAirNet model for general aviation trajectory prediction. The focus is on handling Out-of-Distribution (OOD) and Non-IID data using synthetic data augmentation and fine-tuning techniques. The dataset includes real-world flight trajectories, synthetic data, and OOD test data. The purpose of this project is to improve trajectory prediction for general aviation (GA) by addressing the limitations of existing models in handling unpredictable flight paths.
 
-![Workflow Overview](images/workflow.png | width=100)
+<img src="images/workflow.png" width="200">
 
 ## Research Focus & Objectives
 This project investigates general aviation trajectory prediction, focusing on:
