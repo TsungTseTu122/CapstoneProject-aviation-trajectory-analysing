@@ -132,7 +132,8 @@ This script was used to set the OOD dataset. We use aircrafts with different IDs
 - Tradeoffs in Model Fine-Tuning: We observed diminishing returns when adding excessive synthetic data.
 <img src="images/final_trajectory_collage.png" width="400">
 
-![OOD Uncertainty](images/in distribution vs OOD uncertainty.png)
+<img src="images/in distribution vs OOD uncertainty.png" width="400">
+
 
 
 ### Model Training and Testing Loss (Epochs 3 to 5)
