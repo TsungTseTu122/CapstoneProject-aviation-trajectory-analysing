@@ -25,7 +25,7 @@ This project enhances trajectory prediction models, particularly for handling Ou
 
 ## Repository Structure
 ```
-aviation-trajectory-prediction/
+CapstoneProject-aviation-trajectory-analysing
 │   .gitignore
 │   LICENSE
 │   README.md
@@ -75,8 +75,8 @@ After downloading, place them inside the `src/` directory.
 Due to the dataset size, this is just a sample trial to replicate and show the result.
 1. Clone the repository
 ```
-git clone https://github.com/TsungTseTu122/aviation-trajectory-prediction.git
-cd aviation-trajectory-prediction
+git clone https://github.com/TsungTseTu122/CapstoneProject-aviation-trajectory-analysing.git
+cd CapstoneProject-aviation-trajectory-analysing
 ```
 
 2. Install dependencies
