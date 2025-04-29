@@ -21,7 +21,7 @@ This project enhances trajectory prediction models, particularly for handling Ou
 - Visualization tools: 3D trajectory clustering, real vs. predicted trajectory comparisons, and loss curves were introduced to enhance interpretability.
 - Hyperparameter tuning: Key parameters (e.g., batch size, kernel size, attention heads, and training epochs) were adjusted to balance performance and computational efficiency.
 
-![Data Processing](images/Data processing.png)
+![Data Processing](images/Data_processing.png) 
 
 ## Repository Structure
 ```
